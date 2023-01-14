@@ -1,0 +1,120 @@
+body {
+  background-color: #f8fafd;
+  font-family: 'Inter', sans-serif;
+  color: #252525;
+  padding: 2rem;
+}
+
+main {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+.hero .title {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 1.5rem;
+}
+.hero .subtitle {
+  font-size: 1.125rem;
+  color: #828282;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  justify-content: space-around;
+}
+
+.generate {
+  text-align: center;
+  padding: 2rem;
+}
+.generate.mobile {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+}
+.generate button {
+  background-color: #bb6bd9;
+  font-size: 1.375rem;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  transition: all 0.7s;
+}
+.generate button:hover {
+  transform: translateY(-3px);
+  background-color: #9b519b;
+}
+
+.party {
+  display: none;
+  position: relative;
+  padding: 2rem 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(132, 148, 165, 0.2);
+}
+.party.show {
+  display: grid;
+}
+.party .slot {
+  width: 132px;
+  height: 192px;
+  padding: 1rem;
+  margin: 1rem 2rem;
+  border: 1px solid rgba(132, 148, 165, 0.4);
+  border-radius: 8px;
+  box-shadow: 0px 3px 7px rgba(132, 148, 165, 0.2);
+  text-align: center;
+  transition: all 0.5s;
+}
+.party .slot:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+}
+.party .slot img {
+  border-radius: 8px;
+  border: 1px solid rgba(132, 148, 165, 0.4);
+}
+.party .slot h3 {
+  color: #828282;
+  font-size: 0.75rem;
+}
+.party .slot h2 {
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .box {
+    flex-direction: column-reverse;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .party {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .party .slot {
+    margin: 0.50rem;
+  }
+
+}
